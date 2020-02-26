@@ -1,0 +1,7 @@
+install.packages("devtools")
+library(devtools)
+install_github('lchiffon/REmap')
+library(REmap)
+setwd("D:\\ComputerScience\\Project\\2019-nCoV")
+choropleth_map_data<-read.csv("2019-nCoV-China.csv",stringsAsFactors=FALSE)
+remapC(choropleth_map_data,color = c('#1e90ff','#f0ffff'),title="全国分省新型冠状病毒累计确诊数据地图",subtitle="翟雪莹 ， REmapC ， 2020年2月20日")
